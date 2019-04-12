@@ -1,31 +1,31 @@
-import React from "react";
+import React from 'react';
 
 const initialState = {
-  username: "",
-  password: "",
-  nameError: "",
-  passwordError: ""
+  username: '',
+  password: '',
+  nameError: '',
+  passwordError: ''
 };
 
 class Login extends React.Component {
   state = initialState;
 
-  handleChange = event => {
+  handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
     });
   };
 
   validate = () => {
-    let nameError = "";
-    let passwordError = "";
+    let nameError = '';
+    let passwordError = '';
 
     if (!this.state.name) {
-      nameError = "name cannot be blank";
+      nameError = 'name cannot be blank';
     }
 
     if (!this.state.password) {
-      passwordError = "password cannot be blank";
+      passwordError = 'password cannot be blank';
     }
 
     if (nameError || passwordError) {
@@ -39,7 +39,7 @@ class Login extends React.Component {
     return true;
   };
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
     const isValid = this.validate();
 
@@ -51,7 +51,7 @@ class Login extends React.Component {
   render() {
     return (
       <div className="form__container">
-        <h1 className="heading__main">Login</h1>
+        <h1 className="heading-main">Login</h1>
         <form className="form" onSubmit={this.handleSubmit}>
           <div className="form__group">
             <label htmlFor="name" className="form__label">

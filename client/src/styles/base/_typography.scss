@@ -1,11 +1,10 @@
-.heading {
-  &__main {
-    font-size: 5rem;
-  }
+.heading-main {
+  font-size: 5rem;
+}
 
-  &__sub {
-    font-size: 4rem;
-  }
+.heading-sub {
+  font-size: 3rem;
+  border: 0.1rem;
 }
 
 .text-container {

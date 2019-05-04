@@ -156,12 +156,12 @@ class Container extends React.Component {
                 </div>
               </div>
               <button className="button">Submit</button>
+              <button className="button__back" onClick={this.props.getLatestEntries}>
+                Back
+              </button>
             </div>
           </fieldset>
         </form>
-        <button className="button__back" onClick={this.props.getLatestEntries}>
-          Back
-        </button>
       </div>
     );
   }
